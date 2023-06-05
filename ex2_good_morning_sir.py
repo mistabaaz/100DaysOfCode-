@@ -12,4 +12,5 @@ elif hours<=20:
 else:
     print("Good Night Sir!")
 
+input()
 #Finished
