@@ -9,4 +9,6 @@ mult = num1*num2
 print("by multiplying given two number we get ",mult)
 div = num1 / num2
 print("by dividing the given two number we get ",div)
+
+input()
 #end of the program
