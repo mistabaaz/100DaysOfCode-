@@ -93,3 +93,68 @@ Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/m
 ---
   
 </details>
+
+<details>
+    <summary>Python Exercise 4</summary>
+  <br>
+  Exercise : Make a program to encode & decode user's text messages.
+  <br><br>
+  
+Output Should be like this:
+    
+```
+***************Main Menu***************
+1.Encode the message
+2.Decode the message
+3.Exit
+
+Choose the Correct Option(1/2/3...): 1
+
+Enter A Text Message: hello whats'up
+
+Your message will be Encoded soon...
+Encoded message is here: 
+oXsellohqr[ AF^hats'upweQT 
+
+
+***************Main Menu***************
+1.Encode the message
+2.Decode the message
+3.Exit
+
+Choose the Correct Option(1/2/3...): 2
+
+Enter Encoded Text Message: oXsellohqr[ AF^hats'upweQT
+
+Your message will be Decoded soon...
+Your Decoded message is here: 
+hello whats'up 
+
+
+***************Main Menu***************
+1.Encode the message
+2.Decode the message
+3.Exit
+
+Choose the Correct Option(1/2/3...): 3
+
+You will be exiting soon...
+```
+    
+Methods to Encode a single word:
+- if word length is less than 3 then reverse the word (i.e ok --> ko)
+- otherwise put first letter of the word into last (and remover it from the beginning i.e hello-->elloh)
+- then add random three letters in the begining as well as ending (i.e elloh-->kidellohmin)
+
+    <br>
+    
+Methods to Decode a single word:
+- check if the length of the word is less than 3 if yes then reverse the word (i.e ko-->ok)
+- otherewise remove 3 letters of the word from both the beginning and ending (i.e kidellohmin --> elloh)
+- after that put the last letter of the word to the beginning (i.e elloh --> hello)
+
+Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/ex4_secret_language.py)
+ 
+---
+  
+</details>
