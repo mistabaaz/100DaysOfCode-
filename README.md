@@ -158,3 +158,103 @@ Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/m
 ---
   
 </details>
+
+
+<details>
+    <summary>Python Exercise 5</summary>
+  <br>
+  Exercise : Let's Make classic game named Snake,Water and gun. Simmilar to Rock,Paper and Secior.
+  <br><br>
+  
+Output Should be like this:
+    
+```
+************************* A simple game with computer **************************
+
+First turn is yours
+0 for snake,1 for water,2 for gun,3 for exit
+Choose from above options: 0
+
+Computer chooses Gun
+Therefore : Computer Wins
+
+First turn is yours
+0 for snake,1 for water,2 for gun,3 for exit
+Choose from above options: 0
+
+Computer chooses Snake
+Therefore : A draw!!! try again..
+
+First turn is yours
+0 for snake,1 for water,2 for gun,3 for exit
+Choose from above options: 3
+
+Okay!,exiting after showing final results.
+The final winner is Computer.
+```
+
+Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/ex5_snake_water_gun.py)
+ 
+---
+  
+</details>
+
+<details>
+    <summary>Python Exercise 6</summary>
+  <br>
+  Exercise : The General Library. Make a software having 2 or 3 working functions like (i) no_of_books() (ii) avalible_books_name() like this try to make a working library . You can also add a request feature in library so that a user can add his required books. But all this have to be done using Classes.
+  <br><br>
+  
+Output Should be like this:
+    
+```
+===============The General Library================
+
+
+1.Display The Books present in Library
+2.Request a Book
+3.Get the Number of Availible Books
+4.Exit
+
+Enter a choice (1,2,3...): 1
+
+
+        1.The Great Show
+        2.The Squirrl
+        3.An Amazing Creature
+
+```
+
+Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/ex6_the_general_library.py)
+ 
+---
+  
+</details>
+
+<details>
+    <summary>Python Exercise 7</summary>
+  <br>
+  Exercise : Make a software to organise your folders. Move the files according to their extension using os module.
+  <br><br>
+    
+Output Should be like this:
+    
+```
+Current Working directory is C:\Users\Admin\Documents\Documents\Python\excercise
+press enter if the you want to work on current folder
+Enter the path of the folder:
+====================Main Menu=====================
+
+1.Backup the names of files
+2.Restore the names of files
+3.Clear the clutter by renaming
+4.Exit
+
+Choose the option from above list: 4
+```
+
+Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/ex7_clear_the_clutter.py)
+ 
+---
+  
+</details>
