@@ -258,3 +258,32 @@ Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/m
 ---
   
 </details>
+
+
+<details>
+    <summary>Python Exercise 8</summary>
+  <br>
+  Exercise : Make a program to merge multiple pdfs into one pdf. You may use pypdf module. IF you want to add more functoinallites you are welcome.
+  <br><br>
+    
+Output Should be like this:
+    
+```
+Current Working directory is C:\Users\Admin\Documents\Documents\Python\excercise
+press enter if the you want to work on current folder
+Enter the path of the folder:
+====================Main Menu=====================
+
+1.PDF files in current folder
+2.Merge the all PDFs present in current folder
+3.Change the current folder
+4.Exit
+
+Choose the option from above list: 4
+```
+
+Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/ex8_merge_the_pdf.py)
+ 
+---
+  
+</details>
