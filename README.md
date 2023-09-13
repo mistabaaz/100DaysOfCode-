@@ -263,7 +263,7 @@ Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/m
 <details>
     <summary>Python Exercise 8</summary>
   <br>
-  Exercise : Make a program to merge multiple pdfs into one pdf. You may use pypdf module. IF you want to add more functoinallites you are welcome.
+  Exercise : Make a program to merge multiple pdfs into one pdf. You may use pypdf module. IF you want to add more functoinallites you are welcome.Merge the pdf according to alphabet sorting.
   <br><br>
     
 Output Should be like this:
