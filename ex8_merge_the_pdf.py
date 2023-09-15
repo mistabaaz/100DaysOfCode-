@@ -25,36 +25,56 @@ def fetch_pdf(path):   # to fetch all pdf files
             pdf.append(file)
 
     return pdf
+
+def multiple_dir(path,file):
+    i = 1
+    while True:   #for creating many pdf of same name 
+        if os.path.exists(f"{path}\\{file+str(i)}.pdf"):
+            i = i + 1
+            continue
+        else:
+            pdf = open(f"{path}\\{file+str(i)}.pdf","wb")
+            pdf.close()
+            return file+str(i)
+            
             
 def merged_pdf(path):
-    merger = pypdf.PdfWriter()
     pdf = fetch_pdf(path)
-    for file in pdf:
-        merger.append(file)
-    merger.write(f"{path}/merged.pdf")
+    name = multiple_dir(path,"merged")
+    merger = pypdf.PdfWriter()
+    for pages in pdf:
+        merger.append(f"{path}\\{pages}") 
+    with open(f"{path}\\{name}.pdf","wb") as file:
+        merger.write(file)
     merger.close()
-    return f"{path}\\merged.pdf"
+    return f"{path}\\{name}.pdf"
 
-def encrypt_pdf(path,pwd):
-    reader = pypdf.PdfReader(path)
+def encrypt_pdf(path,file,pwd):
+
+    name = multiple_dir(path,f"{file[:-4]}_encrypted")
+    reader = pypdf.PdfReader(f"{path}\\{file}")
     writer = pypdf.PdfWriter()
-    for page in reader.pages:
+    for page in reader.pages:  #copy all the pages into new pdf
         writer.add_page(page)
-    writer.encrypt(pwd)
-    with open("encrypted.pdf","wb") as file:
-        writer.write(file)    
-    return f"{path}\\encrypted.pdf"
+    writer.encrypt(pwd)  #lock that pdf
+    with open(f"{path}\\{name}.pdf","wb") as file:
+        writer.write(file)    #write the protected pdf into file
+    writer.close()
+    return f"{path}\\{name}.pdf"
 
-def decrypt_pdf(path,pwd):
-    reader = pypdf.PdfReader(path)
+def decrypt_pdf(path,file,pwd):
+
+    name = multiple_dir(path,f"{file[:-4]}_decrypted")
+    reader = pypdf.PdfReader(f"{path}\\{file}")
     writer = pypdf.PdfWriter()
     if reader.is_encrypted:
         reader.decrypt(pwd)
     for page in reader.pages:
         writer.add_page(page)
-    with open("decrypted.pdf","wb") as file:
+    with open(f"{path}\\{name}.pdf","wb") as file:
         writer.write(file)
-    return f"{path}\\decrypted.pdf"
+    writer.close()
+    return f"{path}\\{name}.pdf"
     
 
 if __name__ == "__main__":
@@ -64,8 +84,9 @@ if __name__ == "__main__":
     print("If you want to use current path then press enter")
     print(f"Current working path is {cdir}")
     path = input("Enter the path: ")
-    if not (path):
+    if not (path) or not os.path.exists(path):
         path = cdir  #current path
+        print("\nyou didn't specify the path correctly")
 
     while True:
         #Main Menu
@@ -112,11 +133,12 @@ if __name__ == "__main__":
             print(pdf)
             print("Please choose from above pdfs(1,2,3...)\n")
             ch = ck_int() #choice
-            if ch not in range(len(pdf)+1):
+            if ch not in range(1,len(pdf)+1):
                 print("\nplease choose from above opotion!!")
                 continue
-            pwd = input(f"Enter the password for {pdf[ch-1]}: ")
-            out =  encrypt_pdf(f"{path}\\{pdf[ch-1]}",pwd)
+            file = pdf[ch-1]
+            pwd = input(f"Enter the password for {file}: ")
+            out =  encrypt_pdf(path,file,pwd)
             print(f"\nHere is your encrypted pdf: \n{out}")
 
         elif (choice == 5):
@@ -130,14 +152,15 @@ if __name__ == "__main__":
             if ch not in range(len(pdf)+1):
                 print("\nplease choose from above opotion!!")
                 continue
-            pwd = input(f"Enter the password for {pdf[ch-1]}: ")
-            out =  encrypt_pdf(f"{path}\\{pdf[ch-1]}",pwd)
+            file = pdf[ch-1]
+            pwd = input(f"Enter the password for {file}: ")
+            out =  decrypt_pdf(path,file,pwd)
             print(f"\nHere is your decrypted pdf: \n{out}")
 
         elif (choice == 6):
 
             folder = input("Enter full path of the folder: ")
-            if not folder:
+            if not  folder or not os.path.exists(folder):
                 print("Enter Valid Input!!")
                 continue
             os.chdir(folder)
