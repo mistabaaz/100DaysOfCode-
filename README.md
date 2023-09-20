@@ -287,3 +287,22 @@ Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/m
 ---
   
 </details>
+
+
+<details>
+    <summary>Python Exercise 9</summary>
+  <br>
+  Exercise : Make a list of user names.And use "pywin32" module to speak the user name.You may use any other module for other opreating system as its only works with windows.Or you can also make greeting program which greet the user with name and time respectively.
+  <br><br>
+  
+Output Should be like this:
+    
+```
+"Shoutout to Name"
+```
+
+Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/ex9_shoutout_to_everyone.py)
+ 
+---
+  
+</details>
