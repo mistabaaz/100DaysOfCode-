@@ -306,3 +306,24 @@ Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/m
 ---
   
 </details>
+
+<details>
+    <summary>Python Exercise 10</summary>
+  <br>
+  Exercise : Try to make the News fetching app.you may use requests module to get news from newsapi.Your program should display random newses to users.Or add functionality to let users choose the category of news.
+  <br><br>
+  
+Output Should be like this:
+    
+```
+::::::::::::::Welcome to NewsStation::::::::::::::
+1.for random news
+2.To generate news acc to category
+3.exit
+```
+
+Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/ex10_news_app.py)
+ 
+---
+  
+</details>
