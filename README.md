@@ -327,3 +327,22 @@ Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/m
 ---
   
 </details>
+
+<details>
+    <summary>Python Exercise 11</summary>
+  <br>
+  Exercise : Make a Desktop notifier using python. Like a health remainder to remind you every 30 mins.But this tiem i am not gona to give you hint as this is our last excercise.So struggle yourself to make this notifier.
+  <br><br>
+  
+    
+```
+Always Be Happy :)
+```
+
+Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/ex11_desktop_notifier.py) <br><br>
+I Also made a command line utility to do this see here <br>
+Command Line Utility: [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/desktop_notifier.py)
+ 
+---
+  
+</details>
