@@ -341,7 +341,7 @@ Always Be Happy :)
 
 Solution : [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/ex11_desktop_notifier.py) <br><br>
 I Also made a command line utility to do this see here <br>
-Command Line Utility: [Click here](https://github.com/mistabaaz/100DaysOfCode_Python/blob/main/desktop_notifier.py)
+Command Line Utility: [Click here](https://github.com/mistabaaz/desktop_notifier)
  
 ---
   
